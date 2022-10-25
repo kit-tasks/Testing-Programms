@@ -81,7 +81,7 @@ namespace Треугольники_для_тестирования
         private static bool VerificationOfExistence(int a,int b,int c)
         {
             bool result = false;
-            if (a + b >= c && a + c >= b && b + c > a)
+            if (a + b > c && a + c > b && b + c > a)
             {
                 result = true;
             }
