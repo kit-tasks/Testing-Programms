@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.Verifications = new System.Windows.Forms.Label();
-            this.SideB = new System.Windows.Forms.TextBox();
-            this.SideC = new System.Windows.Forms.TextBox();
-            this.SideA = new System.Windows.Forms.TextBox();
-            this.Result = new System.Windows.Forms.Label();
-            this.Start = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.verifications = new System.Windows.Forms.Label();
+            this.sideB = new System.Windows.Forms.TextBox();
+            this.sideC = new System.Windows.Forms.TextBox();
+            this.sideA = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.Label();
+            this.start = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,82 +53,18 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.Verifications);
-            this.splitContainer1.Panel1.Controls.Add(this.SideB);
-            this.splitContainer1.Panel1.Controls.Add(this.SideC);
-            this.splitContainer1.Panel1.Controls.Add(this.SideA);
+            this.splitContainer1.Panel1.Controls.Add(this.verifications);
+            this.splitContainer1.Panel1.Controls.Add(this.sideB);
+            this.splitContainer1.Panel1.Controls.Add(this.sideC);
+            this.splitContainer1.Panel1.Controls.Add(this.sideA);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.Result);
-            this.splitContainer1.Panel2.Controls.Add(this.Start);
+            this.splitContainer1.Panel2.Controls.Add(this.result);
+            this.splitContainer1.Panel2.Controls.Add(this.start);
             this.splitContainer1.Size = new System.Drawing.Size(516, 280);
             this.splitContainer1.SplitterDistance = 148;
             this.splitContainer1.TabIndex = 6;
-            // 
-            // Verifications
-            // 
-            this.Verifications.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Verifications.AutoSize = true;
-            this.Verifications.ForeColor = System.Drawing.Color.Maroon;
-            this.Verifications.Location = new System.Drawing.Point(119, 52);
-            this.Verifications.Name = "Verifications";
-            this.Verifications.Size = new System.Drawing.Size(0, 16);
-            this.Verifications.TabIndex = 9;
-            this.Verifications.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SideB
-            // 
-            this.SideB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SideB.ForeColor = System.Drawing.Color.Black;
-            this.SideB.Location = new System.Drawing.Point(185, 92);
-            this.SideB.Name = "SideB";
-            this.SideB.Size = new System.Drawing.Size(126, 22);
-            this.SideB.TabIndex = 8;
-            this.SideB.TextChanged += new System.EventHandler(this.SideA_TextChanged);
-            // 
-            // SideC
-            // 
-            this.SideC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SideC.ForeColor = System.Drawing.Color.Black;
-            this.SideC.Location = new System.Drawing.Point(347, 92);
-            this.SideC.Name = "SideC";
-            this.SideC.Size = new System.Drawing.Size(134, 22);
-            this.SideC.TabIndex = 7;
-            this.SideC.TextChanged += new System.EventHandler(this.SideA_TextChanged);
-            // 
-            // SideA
-            // 
-            this.SideA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SideA.BackColor = System.Drawing.Color.White;
-            this.SideA.ForeColor = System.Drawing.Color.Black;
-            this.SideA.Location = new System.Drawing.Point(25, 92);
-            this.SideA.Name = "SideA";
-            this.SideA.Size = new System.Drawing.Size(119, 22);
-            this.SideA.TabIndex = 6;
-            this.SideA.TextChanged += new System.EventHandler(this.SideA_TextChanged);
-            // 
-            // Result
-            // 
-            this.Result.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Result.AutoSize = true;
-            this.Result.Location = new System.Drawing.Point(159, 20);
-            this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(0, 16);
-            this.Result.TabIndex = 6;
-            this.Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Start
-            // 
-            this.Start.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Start.AutoSize = true;
-            this.Start.Location = new System.Drawing.Point(162, 50);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(165, 43);
-            this.Start.TabIndex = 5;
-            this.Start.Text = "Проверить";
-            this.Start.UseVisualStyleBackColor = true;
-            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // label1
             // 
@@ -137,8 +73,72 @@
             this.label1.Location = new System.Drawing.Point(107, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 20);
-            this.label1.TabIndex = 10;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Введите стороны треуголника";
+            // 
+            // verifications
+            // 
+            this.verifications.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.verifications.AutoSize = true;
+            this.verifications.ForeColor = System.Drawing.Color.Maroon;
+            this.verifications.Location = new System.Drawing.Point(119, 52);
+            this.verifications.Name = "verifications";
+            this.verifications.Size = new System.Drawing.Size(0, 16);
+            this.verifications.TabIndex = 9;
+            this.verifications.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sideB
+            // 
+            this.sideB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sideB.ForeColor = System.Drawing.Color.Black;
+            this.sideB.Location = new System.Drawing.Point(185, 92);
+            this.sideB.Name = "sideB";
+            this.sideB.Size = new System.Drawing.Size(126, 22);
+            this.sideB.TabIndex = 2;
+            this.sideB.TextChanged += new System.EventHandler(this.SideA_TextChanged);
+            // 
+            // sideC
+            // 
+            this.sideC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sideC.ForeColor = System.Drawing.Color.Black;
+            this.sideC.Location = new System.Drawing.Point(347, 92);
+            this.sideC.Name = "sideC";
+            this.sideC.Size = new System.Drawing.Size(134, 22);
+            this.sideC.TabIndex = 3;
+            this.sideC.TextChanged += new System.EventHandler(this.SideA_TextChanged);
+            // 
+            // sideA
+            // 
+            this.sideA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sideA.BackColor = System.Drawing.Color.White;
+            this.sideA.ForeColor = System.Drawing.Color.Black;
+            this.sideA.Location = new System.Drawing.Point(25, 92);
+            this.sideA.Name = "sideA";
+            this.sideA.Size = new System.Drawing.Size(119, 22);
+            this.sideA.TabIndex = 1;
+            this.sideA.TextChanged += new System.EventHandler(this.SideA_TextChanged);
+            // 
+            // result
+            // 
+            this.result.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.result.AutoSize = true;
+            this.result.Location = new System.Drawing.Point(144, 23);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(0, 16);
+            this.result.TabIndex = 6;
+            this.result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // start
+            // 
+            this.start.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.start.AutoSize = true;
+            this.start.Location = new System.Drawing.Point(162, 50);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(165, 43);
+            this.start.TabIndex = 4;
+            this.start.Text = "Проверить";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Form1
             // 
@@ -162,12 +162,12 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label Verifications;
-        private System.Windows.Forms.TextBox SideB;
-        private System.Windows.Forms.TextBox SideC;
-        private System.Windows.Forms.TextBox SideA;
-        private System.Windows.Forms.Label Result;
-        private System.Windows.Forms.Button Start;
+        private System.Windows.Forms.Label verifications;
+        private System.Windows.Forms.TextBox sideB;
+        private System.Windows.Forms.TextBox sideC;
+        private System.Windows.Forms.TextBox sideA;
+        private System.Windows.Forms.Label result;
+        private System.Windows.Forms.Button start;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -20,60 +20,60 @@ namespace Треугольники_для_тестирования
 
         private void Start_Click(object sender, EventArgs e)
         {
-            switch (Start.Text)
+            switch (start.Text)
             {
                 case "Проверить":
-                    if (SideA.BackColor == Color.DarkRed || SideB.BackColor == Color.DarkRed || SideC.BackColor == Color.DarkRed || SideA.Text == "" || SideB.Text == "" || SideC.Text == "")
+                    if (sideA.BackColor == Color.DarkRed || sideB.BackColor == Color.DarkRed || sideC.BackColor == Color.DarkRed || sideA.Text == "" || sideB.Text == "" || sideC.Text == "")
                     {
-                        Result.Text = "Повторите ввод";
-                        SideA.Text = "";
-                        SideB.Text = "";
-                        SideC.Text = "";
+                        result.Text = "Повторите ввод";
+                        sideA.Text = "";
+                        sideB.Text = "";
+                        sideC.Text = "";
                     }
                     else
                     {
                         int a, b, c;
-                        Start.Text = "Повторить";
-                        a = Convert.ToInt32(SideA.Text);
-                        b = Convert.ToInt32(SideB.Text);
-                        c = Convert.ToInt32(SideC.Text);
-                        SideA.Visible = false;
-                        SideB.Visible = false;
-                        SideC.Visible = false;
+                        start.Text = "Повторить";
+                        a = Convert.ToInt32(sideA.Text);
+                        b = Convert.ToInt32(sideB.Text);
+                        c = Convert.ToInt32(sideC.Text);
+                        sideA.Visible = false;
+                        sideB.Visible = false;
+                        sideC.Visible = false;
                         if (!VerificationOfExistence(a, b, c))
                         {
-                            Result.Text = "Треугольника не существеут";
+                            result.Text = "Треугольника не существеут";
                             break;
                         }
                         if (a == b)
                         {
                             if (b == c)
                             {
-                                Result.Text = "Треугольник равносторонний";
+                                result.Text = "Треугольник равносторонний";
                             }
-                            else { Result.Text = "Треугольник равнобедренный"; }
+                            else { result.Text = "Треугольник равнобедренный"; }
                         }
                         else if (b == c)
                         {
-                            Result.Text = "Треугольник равнобедренный";
+                            result.Text = "Треугольник равнобедренный";
                         }
                         else if (a == c)
                         {
-                            Result.Text = "Треугольник равнобедренный";
+                            result.Text = "Треугольник равнобедренный";
                         }
-                        else { Result.Text = "Треугольник разносторонний"; }
+                        else { result.Text = "Треугольник разносторонний"; }
                     }
                     break;
                 case "Повторить":
                     {
-                        Start.Text = "Проверить";
-                        Result.Text = "";
-                        SideA.Text = "";
-                        SideB.Text = "";
-                        SideC.Text = "";
-                        SideA.Visible = true;
-                        SideB.Visible = true;
-                        SideC.Visible = true;
+                        start.Text = "Проверить";
+                        result.Text = "";
+                        sideA.Text = "";
+                        sideB.Text = "";
+                        sideC.Text = "";
+                        sideA.Visible = true;
+                        sideB.Visible = true;
+                        sideC.Visible = true;
                         break;
                     }
             }
@@ -93,14 +93,18 @@ namespace Треугольники_для_тестирования
             switch ((sender as TextBox).Name)
             {
                 case "SideA":
-                    str = SideA.Text;
+                    str = sideA.Text;
                     break;
                 case "SideB":
-                    str = SideB.Text;
+                    str = sideB.Text;
                     break;
                 case "SideC":
-                    str = SideC.Text;
+                    str = sideC.Text;
                     break;
+            }
+            if (str == "")
+            {
+                return;
             }
             bool verificator = true;
             for (int i = 0; i < str.Length; i++)
@@ -118,46 +122,42 @@ namespace Треугольники_для_тестирования
                 switch ((sender as TextBox).Name)
                 {
                     case "SideA":
-                        SideA.BackColor = Color.DarkRed;
-                        SideA.ForeColor = Color.White;
+                        sideA.BackColor = Color.DarkRed;
+                        sideA.ForeColor = Color.White;
                         break;
                     case "SideB":
-                        SideB.BackColor = Color.DarkRed;
-                        SideB.ForeColor = Color.White;
+                        sideB.BackColor = Color.DarkRed;
+                        sideB.ForeColor = Color.White;
                         break;
                     case "SideC":
-                        SideC.BackColor = Color.DarkRed;
-                        SideC.ForeColor = Color.White;
+                        sideC.BackColor = Color.DarkRed;
+                        sideC.ForeColor = Color.White;
                         break;
                 }
             }
             else
             {
-                if (true)
-                {
-
-                }
                 switch ((sender as TextBox).Name)
                 {
                     case "SideA":
-                        SideA.BackColor = Color.White;
-                        SideA.ForeColor = Color.Black;
+                        sideA.BackColor = Color.White;
+                        sideA.ForeColor = Color.Black;
                         break;
                     case "SideB":
-                        SideB.BackColor = Color.White;
-                        SideB.ForeColor = Color.Black;
+                        sideB.BackColor = Color.White;
+                        sideB.ForeColor = Color.Black;
                         break;
                     case "SideC":
-                        SideC.BackColor = Color.White;
-                        SideC.ForeColor = Color.Black;
+                        sideC.BackColor = Color.White;
+                        sideC.ForeColor = Color.Black;
                         break;
                 }
             }
-            if (SideA.BackColor ==Color.DarkRed || SideB.BackColor == Color.DarkRed || SideC.BackColor == Color.DarkRed)
+            if (sideA.BackColor ==Color.DarkRed || sideB.BackColor == Color.DarkRed || sideC.BackColor == Color.DarkRed)
             {
-                Verifications.Text = "Введено некоректное значение";
+                verifications.Text = "Введено некоректное значение";
             }
-            else Verifications.Text = ""; 
+            else verifications.Text = ""; 
         }
     }
 }
